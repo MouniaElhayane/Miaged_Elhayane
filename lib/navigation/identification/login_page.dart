@@ -24,8 +24,8 @@ class __LoginFormState extends State<LoginForm> {
       appBar: AppBar(
       centerTitle: true,
       title: Image.asset(
-       'miaged_photo.PNG',
-         height: 70, 
+       'miaged.PNG',
+         height: 100, 
   ),
 ),
       body: Container(
@@ -78,11 +78,11 @@ Widget _buildWelcomeText() {
               prefixIcon: const Icon(Icons.person),
               labelText: 'Email',
               enabledBorder: OutlineInputBorder(
-                borderSide: const BorderSide(width: 3, color: Color.fromARGB(255, 4, 82, 7)),
+                borderSide: const BorderSide(width: 3, color: Color.fromARGB(255, 49, 138, 222)),
                 borderRadius: BorderRadius.circular(15),
               ),
               focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(width: 3, color: Colors.green.shade900),
+                borderSide: BorderSide(width: 3, color: Color.fromARGB(255, 49, 138, 222)),
                 borderRadius: BorderRadius.circular(15),
               ),
             ),
@@ -109,11 +109,11 @@ Widget _buildWelcomeText() {
                 icon: visibilityIcon,
               ),
               enabledBorder: OutlineInputBorder(
-                borderSide: const BorderSide(width: 3, color: Color.fromARGB(255, 4, 66, 7)),
+                borderSide: const BorderSide(width: 3, color: Color.fromARGB(255, 7, 93, 159)),
                 borderRadius: BorderRadius.circular(15),
               ),
               focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(width: 3, color: Color.fromARGB(255, 5, 39, 4)),
+                borderSide: BorderSide(width: 3, color: Color.fromARGB(255, 7, 93, 159)),
                 borderRadius: BorderRadius.circular(15),
               ),
             ),
@@ -136,7 +136,7 @@ Widget _buildWelcomeText() {
                   padding: const EdgeInsets.symmetric(vertical: 15.0),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0)),
-                  primary: Color.fromARGB(255, 5, 56, 8)),
+                  primary: Color.fromARGB(255, 49, 138, 222)),
               label: const Text(
                 "Connexion",
                 style: TextStyle(color: Colors.white, fontSize: 18),
@@ -162,18 +162,18 @@ Widget _buildWelcomeText() {
                   padding: const EdgeInsets.symmetric(vertical: 15.0),
                   side: const BorderSide(
                     width: 3.0,
-                    color: Color.fromARGB(255, 7, 71, 17),
+                    color: Color.fromARGB(255, 49, 138, 222),
                   ),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0)),
                   primary: Colors.white),
               label: const Text(
                 "Créer un compte",
-                style: TextStyle(color: Color.fromARGB(255, 3, 73, 6), fontSize: 18),
+                style: TextStyle(color: Color.fromARGB(255, 49, 138, 222), fontSize: 18),
               ),
               icon: const Icon(
                 Icons.vpn_key,
-                color: Color.fromARGB(255, 2, 46, 4),
+                color: Color.fromARGB(255, 49, 138, 222),
               ),
               onPressed: _registerPressed,
             ),
@@ -190,13 +190,13 @@ Widget _buildWelcomeText() {
       Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) => const HomePage()));
     } on FirebaseAuthException catch (e) {
-      if (e.code == 'user-not-found') {
-        showMyDialog('No user found for that email.');
-      } else if (e.code == 'wrong-password') {
-        showMyDialog('Wrong password provided for that user.');
-      }
+      
+        showMyDialog('L\'e-mail ou le mot de passe est incorrect.');
+      
     }
   }
+  
+
 
   void _registerPressed() {
     Navigator.push(

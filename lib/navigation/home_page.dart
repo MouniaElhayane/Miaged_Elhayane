@@ -1,5 +1,6 @@
 // ignore_for_file: unnecessary_this
 
+import 'package:miaged/navigation/Activity/ChooseActivity.dart';
 import 'package:miaged/navigation/Products/acheter.dart';
 import 'package:miaged/navigation/Cart/panier.dart';
 import 'package:miaged/navigation/Profil/profil.dart';
@@ -21,8 +22,8 @@ class _HomePageState extends State<HomePage> {
   bool gridlist = false;
 
   // ignore: non_constant_identifier_names, prefer_const_constructors, prefer_final_fields
-  Widget _AcheterList = Acheter(gridlist: false);
-  Widget _AcheterGrid = Acheter(gridlist: true);
+  Widget _ActivityList = ChooseActivity(gridlist: false);
+  Widget _ActivityGrid = ChooseActivity(gridlist: true);
   // ignore: non_constant_identifier_names, prefer_const_constructors, prefer_final_fields
   Widget _Panier = Panier();
   // ignore: non_constant_identifier_names, prefer_const_constructors, prefer_final_fields
@@ -34,7 +35,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         centerTitle: true,
         title: Image.asset(
-        'miaged_photo.PNG',
+        'miaged.PNG',
           height: 70, 
          ),
         actions: <Widget>[
@@ -60,8 +61,8 @@ class _HomePageState extends State<HomePage> {
         currentIndex: selectedIndex,
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "Accueil",
+            icon: Icon(Icons.sports_soccer),
+            label: "Activités",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_basket),
@@ -87,9 +88,9 @@ class _HomePageState extends State<HomePage> {
 
   Widget getBody() {
     if (selectedIndex == 0 && gridlist == false) {
-      return _AcheterList;
+      return _ActivityList;
     } else if (selectedIndex == 0 && gridlist == true) {
-      return _AcheterGrid;
+      return _ActivityGrid;
     } else if (selectedIndex == 1) {
       return _Panier;
     } else {

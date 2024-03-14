@@ -28,8 +28,8 @@ class _RegisterPageState extends State<RegisterPage> {
       appBar: AppBar(
       centerTitle: true,
       title: Image.asset(
-       'miaged_photo.PNG',
-         height: 70, 
+       'miaged.PNG',
+         height: 100, 
   ),
 ),
       body: Container(
@@ -51,7 +51,7 @@ class _RegisterPageState extends State<RegisterPage> {
       margin: const EdgeInsets.only(bottom: 30.0),
       child: Column(
         children: const <Widget>[
-          Text("  \n Bien venue à Miaged ! \n Inscrivez-vous pour accéder à l'application.",
+          Text("  \n Bienvenue à Miaged ! \n Inscrivez-vous pour accéder à l'application.",
               style: TextStyle(fontSize: 20), textAlign: TextAlign.center)
         ],
       ),
@@ -69,11 +69,11 @@ class _RegisterPageState extends State<RegisterPage> {
               prefixIcon: const Icon(Icons.person),
               labelText: 'Email',
               enabledBorder: OutlineInputBorder(
-                borderSide: const BorderSide(width: 3, color: Color.fromARGB(255, 5, 49, 11)),
+                borderSide: const BorderSide(width: 3, color: Color.fromARGB(255, 49, 138, 222)),
                 borderRadius: BorderRadius.circular(15),
               ),
               focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(width: 3, color: Color.fromARGB(255, 8, 59, 10)),
+                borderSide: BorderSide(width: 3, color: Color.fromARGB(255, 49, 138, 222)),
                 borderRadius: BorderRadius.circular(15),
               ),
             ),
@@ -100,11 +100,11 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
               labelText: 'Password',
               enabledBorder: OutlineInputBorder(
-                borderSide: const BorderSide(width: 3, color: Color.fromARGB(255, 6, 63, 13)),
+                borderSide: const BorderSide(width: 3, color: Color.fromARGB(255, 49, 138, 222)),
                 borderRadius: BorderRadius.circular(15),
               ),
               focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(width: 3, color: Color.fromARGB(255, 9, 65, 19)),
+                borderSide: BorderSide(width: 3, color: Color.fromARGB(255, 49, 138, 222)),
                 borderRadius: BorderRadius.circular(15),
               ),
             ),
@@ -132,11 +132,11 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
               labelText: 'Confirm Password',
               enabledBorder: OutlineInputBorder(
-                borderSide: const BorderSide(width: 3, color: Color.fromARGB(255, 3, 49, 11)),
+                borderSide: const BorderSide(width: 3, color: Color.fromARGB(255, 49, 138, 222)),
                 borderRadius: BorderRadius.circular(15),
               ),
               focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(width: 3, color: Color.fromARGB(255, 8, 71, 17)),
+                borderSide: BorderSide(width: 3, color: Color.fromARGB(255, 49, 138, 222)),
                 borderRadius: BorderRadius.circular(15),
               ),
             ),
@@ -159,7 +159,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   padding: const EdgeInsets.symmetric(vertical: 15.0),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0)),
-                  primary: Color.fromARGB(255, 5, 61, 17)),
+                  primary: Color.fromARGB(255, 49, 138, 222)),
               label: const Text(
                 "Inscription",
                 style: TextStyle(color: Colors.white, fontSize: 18),

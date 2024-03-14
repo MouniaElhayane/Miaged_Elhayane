@@ -84,7 +84,7 @@ class _ProductScreenState extends State<ProductScreen>
        appBar: AppBar(
       centerTitle: true,
       title: Image.asset(
-       'miaged_photo.PNG',
+       'miaged.PNG',
          height: 70, 
   ),
 ),
