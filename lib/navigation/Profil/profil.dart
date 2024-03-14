@@ -17,7 +17,6 @@ class _ProfilPageState extends State<Profil> {
   TextEditingController addressController = TextEditingController();
   TextEditingController zipCodeController = TextEditingController();
   TextEditingController cityController = TextEditingController();
-
   FirebaseFirestore firestore = FirebaseFirestore.instance;
 
   final _formKey = GlobalKey<FormState>();
